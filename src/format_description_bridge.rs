@@ -23,7 +23,14 @@ extern "C" {
     pub static kCMImageDescriptionFlavor_ISOFamily: CFStringRef;
     pub static kCMImageDescriptionFlavor_3GPFamily: CFStringRef;
 
-    
+    pub fn CMVideoFormatDescriptionCreateFromH264ParameterSets(
+        allocator: CFAllocatorRef,
+        parameter_set_count: size_t,
+        parameter_set_pointers: *const *const u8,
+        parameter_set_sizes: *const size_t,
+        nal_unit_header_length: i32,
+        format_description_out: *mut CMVideoFormatDescriptionRef,
+    ) -> OSStatus;
     pub fn CMVideoFormatDescriptionCreateFromBigEndianImageDescriptionData(
         allocator: CFAllocatorRef,
         imageDescriptionData: *const u8,
@@ -37,7 +44,7 @@ extern "C" {
         imageDescriptionBlockBuffer: CMBlockBufferRef,
         imageDescriptionStringEncoding: CFStringEncoding,
         imageDescriptionFlavor: CFStringRef,
-        videoFormatDescriptionOut: *mut CMVideoFormatDescriptionRef
+        videoFormatDescriptionOut: *mut CMVideoFormatDescriptionRef,
     ) -> OSStatus;
 
 }
