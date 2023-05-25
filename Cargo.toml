@@ -12,7 +12,7 @@ documentation = "https://docs.rs/core-media-sys/*/x86_64-apple-darwin/core_media
 [dependencies]
 cfg-if = "0.1"
 libc = "0.2"
-core-foundation-sys = "0.7"
+core-foundation-sys = "0.8"
 
 [features]
 default = []
