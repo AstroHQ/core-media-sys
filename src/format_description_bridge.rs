@@ -28,6 +28,14 @@ extern "C" {
         nal_unit_header_length: i32,
         format_description_out: *mut CMVideoFormatDescriptionRef,
     ) -> OSStatus;
+    pub fn CMVideoFormatDescriptionGetH264ParameterSetAtIndex(
+        videoDesc: CMVideoFormatDescriptionRef,
+        parameterSetIndex: size_t,
+        parameterSetPointerOut: *mut *const u8,
+        parameterSetSizeOut: *mut size_t,
+        parameterSetCountOut: *mut size_t,
+        NALUnitHeaderLengthOut: *mut i32,
+    ) -> OSStatus;
     pub fn CMVideoFormatDescriptionCreateFromBigEndianImageDescriptionData(
         allocator: CFAllocatorRef,
         imageDescriptionData: *const u8,

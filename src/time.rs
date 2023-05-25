@@ -33,4 +33,5 @@ extern "C" {
     pub static kCMTimeNegativeInfinity: CMTime;
     pub static kCMTimeZero: CMTime;
 
+    pub fn CMTimeMake(value: i64, timescale: i32) -> CMTime;
 }

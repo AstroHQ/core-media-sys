@@ -13,6 +13,10 @@ documentation = "https://docs.rs/core-media-sys/*/x86_64-apple-darwin/core_media
 cfg-if = "0.1"
 libc = "0.2"
 core-foundation-sys = "0.8"
+core-video-sys = "0.2.0"
 
 [features]
 default = []
+
+[patch.crates-io]
+core-video-sys = { git = "https://github.com/AstroHQ/core-video-sys" }

@@ -1,3 +1,4 @@
+use crate::core_foundation_sys::array::CFArrayRef;
 use crate::core_foundation_sys::base::{Boolean, CFAllocatorRef, CFTypeID, CFTypeRef, OSStatus};
 use crate::core_foundation_sys::dictionary::CFDictionaryRef;
 use crate::core_foundation_sys::string::CFStringRef;
@@ -170,4 +171,6 @@ extern "C" {
         extensions: CFDictionaryRef,
         outDesc: *mut CMVideoFormatDescriptionRef,
     ) -> OSStatus;
+
+    pub fn CMVideoFormatDescriptionGetExtensionKeysCommonWithImageBuffers() -> CFArrayRef;
 }

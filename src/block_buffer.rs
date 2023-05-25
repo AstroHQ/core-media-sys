@@ -123,7 +123,7 @@ extern "C" {
         offset: size_t,
         lengthAtOffset: *mut size_t,
         totalLength: *mut size_t,
-        dataPointer: *mut c_char,
+        dataPointer: *mut *mut c_char,
     ) -> OSStatus;
     pub fn CMBlockBufferGetDataLength(theBuffer: CMBlockBufferRef) -> size_t;
     pub fn CMBlockBufferIsRangeContiguous(
