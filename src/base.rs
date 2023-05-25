@@ -1,10 +1,9 @@
-use crate::libc::c_long;
-use crate::core_foundation_sys::base::{OSStatus, Boolean, CFAllocatorRef, CFTypeID, CFTypeRef};
+use crate::core_foundation_sys::base::{Boolean, CFAllocatorRef, CFTypeID, CFTypeRef, OSStatus};
 use crate::core_foundation_sys::dictionary::CFDictionaryRef;
 use crate::core_foundation_sys::string::CFStringRef;
+use crate::libc::c_long;
 
 use crate::sync::CMClockRef;
-
 
 cfg_if! {
     if #[cfg(target_arch = "x86_64")] {
@@ -29,7 +28,5 @@ cfg_if! {
     }
 }
 
-
 pub type CMPersistentTrackID = i32;
 pub const kCMPersistentTrackID_Invalid: CMPersistentTrackID = 0;
-

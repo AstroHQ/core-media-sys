@@ -1,22 +1,19 @@
-use crate::libc::size_t;
-use crate::core_foundation_sys::base::{OSStatus, Boolean, CFAllocatorRef, CFTypeID, CFTypeRef};
+use crate::core_foundation_sys::base::{Boolean, CFAllocatorRef, CFTypeID, CFTypeRef, OSStatus};
 use crate::core_foundation_sys::dictionary::CFDictionaryRef;
-use crate::core_foundation_sys::string::{CFStringRef, CFStringEncoding};
+use crate::core_foundation_sys::string::{CFStringEncoding, CFStringRef};
+use crate::libc::size_t;
 
-use crate::sync::CMClockRef;
 use crate::block_buffer::CMBlockBufferRef;
 use crate::format_description::CMVideoFormatDescriptionRef;
+use crate::sync::CMClockRef;
 
-
-
-pub const kCMFormatDescriptionBridgeError_InvalidParameter: OSStatus                    = -12712;
-pub const kCMFormatDescriptionBridgeError_AllocationFailed: OSStatus                    = -12713;
-pub const kCMFormatDescriptionBridgeError_InvalidSerializedSampleDescription: OSStatus  = -12714;
-pub const kCMFormatDescriptionBridgeError_InvalidFormatDescription: OSStatus            = -12715;
-pub const kCMFormatDescriptionBridgeError_IncompatibleFormatDescription: OSStatus       = -12716;
-pub const kCMFormatDescriptionBridgeError_UnsupportedSampleDescriptionFlavor: OSStatus  = -12717;
-pub const kCMFormatDescriptionBridgeError_InvalidSlice: OSStatus                        = -12719;
-
+pub const kCMFormatDescriptionBridgeError_InvalidParameter: OSStatus = -12712;
+pub const kCMFormatDescriptionBridgeError_AllocationFailed: OSStatus = -12713;
+pub const kCMFormatDescriptionBridgeError_InvalidSerializedSampleDescription: OSStatus = -12714;
+pub const kCMFormatDescriptionBridgeError_InvalidFormatDescription: OSStatus = -12715;
+pub const kCMFormatDescriptionBridgeError_IncompatibleFormatDescription: OSStatus = -12716;
+pub const kCMFormatDescriptionBridgeError_UnsupportedSampleDescriptionFlavor: OSStatus = -12717;
+pub const kCMFormatDescriptionBridgeError_InvalidSlice: OSStatus = -12719;
 
 extern "C" {
     pub static kCMImageDescriptionFlavor_QuickTimeMovie: CFStringRef;
