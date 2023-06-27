@@ -10,7 +10,7 @@ repository = "https://github.com/luozijun/rust-core-media-sys"
 documentation = "https://docs.rs/core-media-sys/*/x86_64-apple-darwin/core_media_sys"
 
 [dependencies]
-cfg-if = "0.1"
+cfg-if = "1.0.0"
 libc = "0.2"
 core-foundation-sys = "0.8"
 core-video-sys = "0.2.0"
